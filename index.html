@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profano Radio — 24/7</title>
+
+  <!-- Fonte velha internet -->
+  <link href="https://fonts.googleapis.com/css2?family=Verdana&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================
+       THEME VARIABLES
+       ========================= */
+    :root {
+      --bg-color: #0b0b0b;
+      --panel-color: #141414;
+      --accent-color: #8c8c8c;
+      --text-color: #e0e0e0;
+      --border-color: #2a2a2a;
+      --font-main: Verdana, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-main);
+      font-size: 14px;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+    .header {
+      background: url("header-placeholder.jpg") center/cover no-repeat;
+      border-bottom: 1px solid var(--border-color);
+      padding: 20px;
+    }
+
+    .profile {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      background: rgba(0,0,0,0.6);
+      padding: 15px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      background: #222;
+      border: 1px solid var(--border-color);
+    }
+
+    .profile-info h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .profile-info span {
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    .bio {
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    /* =========================
+       PLAYER
+       ========================= */
+    .player-bar {
+      background: var(--panel-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .player-inner {
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    audio {
+      width: 300px;
+    }
+
+    .now-playing {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    /* =========================
+       MAIN LAYOUT
+       ========================= */
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 20px;
+    }
+
+    .panel {
+      background: var(--panel-color);
+      border: 1px solid var(--border-color);
+      padding: 10px;
+    }
+
+    .panel h3 {
+      margin-top: 0;
+      font-size: 13px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 5px;
+    }
+
+    /* =========================
+       CHAT (mock)
+       ========================= */
+    .chat {
+      height: 300px;
+      overflow-y: auto;
+      font-size: 12px;
+      background: #0f0f0f;
+      padding: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .chat p {
+      margin: 4px 0;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+    footer {
+      text-align: center;
+      font-size: 11px;
+      opacity: 0.6;
+      margin: 30px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER / PROFILE -->
+  <div class="header">
+    <div class="profile">
+      <div class="avatar"></div>
+      <div class="profile-info">
+        <h1>Profano</h1>
+        <span>@profano</span>
+        <div class="bio">
+          Rádio autoral 24/7.<br>
+          Beats, rap e ruído ritual.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLAYER -->
+  <div class="player-bar">
+    <div class="player-inner">
+      <audio controls autoplay loop>
+        <source src="stream-placeholder.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+      <div class="now-playing">
+        Tocando agora: <strong>Faixa Desconhecida</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="panel">
+      <h3>Links</h3>
+      <p><a href="#">Bandcamp</a></p>
+      <p><a href="#">Instagram</a></p>
+      <p><a href="#">Arquivo</a></p>
+
+      <h3>Tags</h3>
+      <p>#rap #underground #24x7</p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="panel">
+      <h3>Chat</h3>
+      <div class="chat">
+        <p><strong>user1:</strong> isso tá pesado</p>
+        <p><strong>user2:</strong> deixei rolando a noite toda</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    rádio contínua — velha internet nunca morreu
+  </footer>
+
+</body>
+</html>
