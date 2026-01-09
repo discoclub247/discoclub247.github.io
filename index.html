@@ -182,6 +182,13 @@
 
   <!-- PLAYER -->
   <div class="player-bar">
+    
+    <audio id="radioPlayer" controls preload="none" crossorigin="anonymous">
+  <source src="https://radio.seudominio.com:8000/stream" type="audio/mpeg">
+  <source src="https://radio.seudominio.com:8000/stream" type="audio/ogg">
+  Seu navegador não suporta o elemento de áudio.
+</audio>
+    
     <div class="player-inner">
       <audio controls autoplay loop>
         <source src="stream-placeholder.mp3" type="audio/mpeg">
